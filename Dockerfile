@@ -1,4 +1,4 @@
-FROM ubuntu:3.6-alpine
+FROM ubuntu:20.04
 
 COPY . /app
 
