@@ -1,7 +1,6 @@
 FROM python:3.8.6-alpine3.12
 
-#RUN apt-get update && apt-get -y install curl python3 python3-pip
-RUN apt-get update && apt-get -y install curl
+RUN apk --no-cache add curl
 
 COPY requirements.txt /app/requirements.txt
 
