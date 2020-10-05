@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get -y install curl python3 python3-pip
 
-COPY requirements /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
