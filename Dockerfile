@@ -1,9 +1,13 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get -y upgrade
+RUN apt-get -y install python3 python3-pip
 
 COPY . /app
 
 WORKDIR /app
 
+RUN echo `python3 --version`
 RUN pip3 install -r requirements.txt
 
 CMD ["python3", "app.py"]
