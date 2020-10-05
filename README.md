@@ -8,5 +8,5 @@ Following along with [tutorial](https://howchoo.com/devops/how-to-add-a-health-c
 git clone https://github.com/InterruptSpeed/docker-flask
 cd docker-flask
 sudo docker build -t docker-flask .
-sudo docker run --rm --name docker-flask -p 5000:5000 docker-flask
+sudo docker run -d --name docker-flask -p 5000:5000 docker-flask
 ```
