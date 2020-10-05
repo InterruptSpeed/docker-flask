@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install python3 python3-pip
+RUN apt-get -y install python3 python3-pip
 
 COPY . /app
 
