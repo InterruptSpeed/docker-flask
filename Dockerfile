@@ -1,16 +1,15 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get -y install python3 python3-pip
-RUN apt-get -y install curl
+RUN apt-get update && apt-get -y install curl python3 python3-pip
 
-COPY . /app
+COPY requirements /app/requirements.txt
 
 WORKDIR /app
 
-RUN echo `python3 --version`
 RUN pip3 install -r requirements.txt
+
+COPY . /app
 
 HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
 
-CMD ["python3", "app.py"]
+CMD ["python3", "app.py", "&"]
