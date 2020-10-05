@@ -10,3 +10,9 @@ cd docker-flask
 sudo docker build -t docker-flask .
 sudo docker run -d --name docker-flask -p 5000:5000 docker-flask
 ```
+
+to check health:
+
+```
+sudo docker inspect --format='{{json .State.Health}}' docker-flask
+```
