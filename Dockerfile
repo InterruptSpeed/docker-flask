@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt install python3-pip
+RUN apt-get update && apt-get install python3-pip
 
 RUN pip3 install -r requirements.txt
 
