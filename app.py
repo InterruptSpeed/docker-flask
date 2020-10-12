@@ -1,3 +1,4 @@
+import sys
 from flask import Flask
 
 app = Flask(__name__)
@@ -5,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "Hello world"
+    return sys.version
 
 
 if __name__ == "__main__":
